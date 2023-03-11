@@ -1,0 +1,11 @@
+.isActive {
+    color: red;
+}
+
+.notActive {
+    color: rosybrown;
+}
+
+.isActive:hover, .notActive:hover {
+    font-family: Montserrat;
+}
