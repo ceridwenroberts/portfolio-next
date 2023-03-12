@@ -1,7 +1,4 @@
-import Link from "next/link";
-// import {works} from "./worksData"
-
-const works = [
+export const works = [
   {
     name: "What the pup?!",
     description: "Page for perusing dog breeds",
@@ -31,20 +28,3 @@ const works = [
     skills: ["React w/ Tanstack", "CSS"],
   },
 ];
-// console.log(works);
-
-export default function WorksList() {  
-return (
-    <ul>
-      <Link href={`/works`}>Works-main Link</Link>
-      {works.map((work, index) => (
-        <li key={work.name}>
-            <h2>{work.name}</h2>
-          <Link href={`/${work.slug}`}>{work.name}</Link>
-        </li>
-      ))
-      }
-    </ul>
-  );
-
-}
