@@ -1,6 +1,7 @@
 import Link from "next/link";
 // import {works} from "./worksData"
 
+
 const works = [
   {
     name: "What the pup?!",
@@ -36,12 +37,10 @@ const works = [
 export default function WorksList() {  
 return (
     <ul>
-      <Link href={`/works`}>Works-main Link</Link>
       {works.map((work, index) => (
-        <li key={work.name}>
+        <Link href={work.url} key={work.name}>
             <h2>{work.name}</h2>
-          <Link href={`/${work.slug}`}>{work.name}</Link>
-        </li>
+          </Link>
       ))
       }
     </ul>

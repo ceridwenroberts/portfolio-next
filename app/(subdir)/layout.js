@@ -1,11 +1,13 @@
+import { NameIcon } from '../NameIcon';
 import Navbar from '../Navbar'
+import Navi from "../Navi"
 
 
 export default function SubdirLayout({ children }) {
   return (
     <>
-        <div>
-          <h2>Det här är min nav bar</h2>
+        <div className='styles.main'>
+          <NameIcon />
           <Navbar />
         </div>
         {children}

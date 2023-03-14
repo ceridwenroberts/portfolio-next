@@ -1,7 +1,11 @@
-import WorksMenu from "../../WorksList"
-export default function WorksPage() {
-  <div>
-    <h1>Works Main</h1>
-    
-  </div>;
+
+import React from 'react'
+import WorksList from "../../WorksList"
+
+export default function WorkPage() {
+  return (
+    <div>WorkPage
+      <WorksList />
+    </div>
+  )
 }
