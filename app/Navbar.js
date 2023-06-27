@@ -3,39 +3,44 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { useSelectedLayoutSegment } from "next/navigation";
+import { useSelectedLayoutSegment, usePathname } from "next/navigation";
 import styles from "./Navbar.module.css";
 import { Montserrat, Montserrat_Alternates } from "@next/font/google";
-
+// import { works } from "../api/hello/worksData.js";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
 const links = [
   // { label: "home", path: "/", targetSegment: "home" },
-  { label: "home", path: "/", targetSegment: null },
+  // { label: "home", path: "/", targetSegment: null },
   { label: "work", path: "/work", targetSegment: "work" },
   { label: "about", path: "/about", targetSegment: "about" },
   { label: "contact", path: "/contact", targetSegment: "contact" },
 ];
 
-
-
-export default function Navbar(props) {
+export default function Navbar() {
+  // console.log({ works });
   // console.log("props:", props);
   const activeSegment = useSelectedLayoutSegment();
   const [linksArr, setLinksArr] = useState(links);
   console.log("linksArr after: linksArr");
-
+  const pathname = usePathname();
+  console.log({ pathname });
 
   if (activeSegment === null) {
     links.filter((l) => links.label === "home");
-
   }
-  console.log("links");
-  console.log("links",links);
+
+  if (!activeSegment) {
+    console.log(links.label);
+  }
+
+  console.log({ links });
   return (
     <>
-      {links.map((l, i) => (
+      {links.map((l, i) => {
+        console.log({l});
+        return (
         <Link
           className={
             activeSegment === l.targetSegment
@@ -51,28 +56,28 @@ export default function Navbar(props) {
           href={l.path}
         >
           <p className={montserrat.className}>{l.label}</p>
-          {i}
+          {/* {i} */}
           {l.key}
         </Link>
-      ))}
+        )
+      })}
     </>
   );
 }
 
+// const [filteredLinks, setFilteredLinks] = useState(links);
 
-  // const [filteredLinks, setFilteredLinks] = useState(links);
+// useEffect(() => {
+//   if (activeSegment === null) {
+//     setFilteredLinks(links.slice(1));
+//   } else {
+//     setFilteredLinks(links);
+//   }
+// }, [activeSegment]);
 
-  // useEffect(() => {
-  //   if (activeSegment === null) {
-  //     setFilteredLinks(links.slice(1));
-  //   } else {
-  //     setFilteredLinks(links);
-  //   }
-  // }, [activeSegment]);
+// // console.log(links)
 
-  // // console.log(links)
-
-  // // console.log("activeSegment", activeSegment)
-  //   // links.splice(0, 1);
-  //   // console.log(links);
-  // const [filteredLinks, setFilteredLinks] = useState(links);
+// // console.log("activeSegment", activeSegment)
+//   // links.splice(0, 1);
+//   // console.log(links);
+// const [filteredLinks, setFilteredLinks] = useState(links);
