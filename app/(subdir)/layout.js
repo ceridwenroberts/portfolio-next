@@ -1,16 +1,16 @@
-import { NameIcon } from '../NameIcon';
-import Navbar from '../Navbar'
-import Navi from "../Navi"
-
+import { NameIcon } from "../components/NameIcon";
+import Navbar from "../Navbar";
+import Navi from "../Navi";
+import styles from "app/(subdir)/subdir.module.css";
+import Header from "@/app/components/Header";
 
 export default function SubdirLayout({ children }) {
   return (
     <>
-        <div className='styles.main'>
-          <NameIcon />
-          <Navbar />
-        </div>
-        {children}
+      <div className={styles.main}>
+        <Header />
+      </div>
+      {children}
     </>
   );
 }

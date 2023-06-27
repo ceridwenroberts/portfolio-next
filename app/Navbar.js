@@ -22,24 +22,23 @@ export default function Navbar() {
   // console.log({ works });
   // console.log("props:", props);
   const activeSegment = useSelectedLayoutSegment();
-  const [linksArr, setLinksArr] = useState(links);
-  console.log("linksArr after: linksArr");
+  // console.log("linksArr after: linksArr");
   const pathname = usePathname();
-  console.log({ pathname });
+  // console.log({ pathname });
 
   if (activeSegment === null) {
     links.filter((l) => links.label === "home");
   }
 
   if (!activeSegment) {
-    console.log(links.label);
+    // console.log(links.label);
   }
 
-  console.log({ links });
+  // console.log({ links });
   return (
     <>
       {links.map((l, i) => {
-        console.log({l});
+        // console.log({l});
         return (
         <Link
           className={

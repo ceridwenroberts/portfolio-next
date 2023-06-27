@@ -1,4 +1,6 @@
 
+"use client"
+
 import React, { useState } from "react";
 import Navbar from "./Navi";
 import styles from "./Navbar.module.css";
@@ -6,7 +8,7 @@ import styles from "./Navbar.module.css";
 const NavList = (props) => {
   const links = props.links;
   const title = props.path;
-  console.log(props, links);
+  // console.log(props, links);
   return (
   
     <div className="links-list">

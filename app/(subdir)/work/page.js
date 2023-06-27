@@ -1,11 +1,15 @@
 
 import React from 'react'
 import WorksList from "../../WorksList"
+import WorksGrid from '@/app/components/WorksGrid'
+import Navbar from '@/app/Navbar'
 
 export default function WorkPage() {
   return (
-    <div>WorkPage
-      <WorksList />
-    </div>
+    <>
+    <h1>WorkPage </h1>
+      {/* <WorksList /> */}
+      <WorksGrid />
+      </>
   )
 }
