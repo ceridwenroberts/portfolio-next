@@ -1,3 +1,4 @@
+import { brightYoungThings } from '@/styles/fonts'
 import React from 'react'
 
 export default function Loading() {

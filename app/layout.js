@@ -1,5 +1,5 @@
 import './globals.css'
-import { montserrat } from '@/styles/fonts'
+import { inter, brightYoungThings, montserrat, montserrat_alt } from '@/styles/fonts'
 
 
 export const metadata = {
@@ -15,8 +15,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={montserrat.className}>{children}</body>
-      <body>{children}</body>
+      <body className={`${montserrat.className}`} style={{
+        display: "flex",
+        flexWrap: "wrap",
+        alignContent: "center"}}>{children}</body>
     </html>
   )
 }

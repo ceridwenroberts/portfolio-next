@@ -11,11 +11,7 @@ export default function Home() {
       className={`${styles.main}`}
       styles={{
         display: "flex",
-      }}
-    >
-      <p className={montserrat.className}>Font Test</p>
-      <p className={montserrat_alt.className}>Font Test</p>
-      <p className={brightYoungThings.className}>Font Test</p>
+      }}>
       <div>
         <NameIcon styles={{ padding: "18px" }} />
         <HomeMenu />

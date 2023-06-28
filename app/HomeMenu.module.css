@@ -13,20 +13,29 @@
 .work {
     /* background-color: aquamarine; */
 
-    color: rosybrown;
+    color: rgb(192, 122, 122);
+    /* color: rgb(253, 144, 144); */
     font-size: clamp(6rem, 15vw, 12rem);
+    opacity: 70%;
+}
+
+.work:hover {
+    opacity: 100%;
 }
 
 .about
 {
     font-size: clamp(2rem, 6vw, 8rem);
+    opacity: 50%;
 }
 
 .contact {
     font-size: clamp(2rem, 3vw, 8rem);
+    opacity: 50%;
 }
 .about:hover{
- opacity: 50%;
+ opacity: 25%;
+ /* color: grey; */
 }
 
 .contact:hover {

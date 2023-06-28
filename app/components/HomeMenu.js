@@ -4,11 +4,9 @@ import React from "react";
 import Link from "next/link";
 import styles from "app/HomeMenu.module.css";
 import localFont from "@next/font/local";
-// import test from "@/fonts/bright-young-things-cufonfonts-webfont/BrightYoungThings.woff";
+import { brightYoungThings, montserrat, montserrat_alt, montserrat_sub, syncopate } from "@/styles/fonts";
 
-// const brightFont = localFont({
-//   src: "fonts/brightYoungThingsWebfont/BrightYoungThings.woff",
-// });
+
 
 export const HomeMenu = () => {
   return (
@@ -23,18 +21,18 @@ export const HomeMenu = () => {
         }}
         className={styles.menu}
       >
-        <Link href="./about" className={`${styles.linkText} ${styles.about}`}>
+        <Link href="./about" className={` ${brightYoungThings.className} ${styles.linkText} ${styles.about}`} styles={{fontWeight: "100"}}>
           about
         </Link>
         <Link
           href="./work"
-          className={`${styles.linkText} ${styles.work}`}
+          className={`${brightYoungThings.className} ${styles.linkText} ${styles.work}`}
         >
-          Work
+          work
         </Link>
         <Link
           href="./contact"
-          className={`${styles.linkText} ${styles.contact}`}
+          className={`${brightYoungThings.className} ${styles.linkText} ${styles.contact}`}
         >
           Contact
         </Link>
