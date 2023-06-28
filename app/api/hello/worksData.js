@@ -6,7 +6,7 @@ export const works = [
     skills: ["JS", "API:s", "CSS", "html"],
     slug: "what-the-pup",
     image: {
-      src: "",
+      src: "/whatThePupPreview.png",
       alt: "What the pup? site preview"
     }
   },
@@ -17,8 +17,8 @@ export const works = [
     url: "https://ceridwenroberts.github.io/mastermind-game/",
     slug: "mastermind", 
     image: {
-      src: "",
-      alt: ""
+      src: "/mastermindPreview.png",
+      alt: "Mastermind game preview"
     }, 
     skills: ["JS", "jQuery", "CSS", "html"],
   },
@@ -29,8 +29,8 @@ export const works = [
     url: "",
     slug: "brithday-countdown",
     image: {
-      src: "",
-      alt: ""
+      src: "/birthdayCountdownPreview.png",
+      alt: "Birthday countdown page preview."
     },  
     skills: ["React", "CSS", "html"],
   },
@@ -41,8 +41,8 @@ export const works = [
     url: "https://randomjokes-j6w1zm8vk-ceridwenroberts.vercel.app/",
     slug: "",
     image: {
-      src: "",
-      alt: ""
+      src: "/jokesApiPreview.png",
+      alt: "Random jokes site preview"
     }, 
     skills: ["React w/ Tanstack", "CSS"],
   },
