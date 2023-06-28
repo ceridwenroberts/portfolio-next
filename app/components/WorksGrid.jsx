@@ -12,8 +12,8 @@ export default function WorksGrid() {
     console.log({works});
 const worksCards = works.map((card, i) => {
     console.log({ works });
-    // if (typeof card === 'object' && card !== null) {
-        console.log({card});
+    if (typeof card === 'object' && card !== null) {
+
       return (   
         <WorkCard
           key={card.name}
@@ -28,7 +28,7 @@ const worksCards = works.map((card, i) => {
           height={500}
         />
       ); 
-    // }
+    }
     return null; // Ignore non-object elements in the works array
   });
 

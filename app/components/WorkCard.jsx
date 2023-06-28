@@ -15,17 +15,28 @@ const defaultImgSrc = "/public/whatThePupPreview.png"
 // </Link>
 return ( <div className={devStyle.coloring}>
   <Link href={url} key={title} className={devStyle}>
-    <div  className={devStyle}>
-      <Image 
-      src="/public/whatThePupPrieview.png" 
-      alt={alt} 
-      height={height} 
-      width={width} 
-      />
-      <h1>{title} </h1>
+
+    <div  className={devStyle} style={{ position: "relative", height: "400px", margin: "10px" }}>
+   
+    <Image
+          src={src}
+          alt={alt}
+          // className={styles.vercelLogo}
+          width={500}
+          height={500}
+          priority
+          // fill
+          // sizes='0%'
+          onError={console.log("error om image fetch")}
+          style={{
+            objectFit: 'cover'
+          }}
+        />
+    
     </div>
 
 </Link>
+<h1>{title} </h1>
 </div>
 ); 
 }
