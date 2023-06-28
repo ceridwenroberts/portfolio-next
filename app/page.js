@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { montserrat, montserrat_alt, brightYoungThings } from "@/styles/fonts";
-import { Inter, Montserrat } from "next/font/google";
 import styles from "./page.module.css";
 import { HomeMenu } from "./components/HomeMenu";
 import { NameIcon } from "./components/NameIcon";

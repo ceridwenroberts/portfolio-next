@@ -29,7 +29,7 @@ export const works = [
     url: "",
     slug: "brithday-countdown",
     image: {
-      src: "/birthdayCountdownPreview.png",
+      src: "/birthdayCountdownPagePreview.png",
       alt: "Birthday countdown page preview."
     },  
     skills: ["React", "CSS", "html"],

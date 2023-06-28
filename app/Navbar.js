@@ -11,32 +11,32 @@ import { Montserrat, Montserrat_Alternates } from "@next/font/google";
 const montserrat = Montserrat({ subsets: ["latin"] });
 
 const links = [
-  // { label: "home", path: "/", targetSegment: "home" },
-  // { label: "home", path: "/", targetSegment: null },
   { label: "work", path: "/work", targetSegment: "work" },
   { label: "about", path: "/about", targetSegment: "about" },
   { label: "contact", path: "/contact", targetSegment: "contact" },
 ];
 
 export default function Navbar() {
-  // console.log({ works });
-  // console.log("props:", props);
   const activeSegment = useSelectedLayoutSegment();
-  // console.log("linksArr after: linksArr");
   const pathname = usePathname();
-  // console.log({ pathname });
 
   if (activeSegment === null) {
     links.filter((l) => links.label === "home");
   }
 
-  if (!activeSegment) {
-    // console.log(links.label);
-  }
+  // const boldHover = (e) => {
+  //   console.log("mouseover");
+  //   e.target.style.fontWeight = "600"
+  //   if (activeSegment)
+  //   {
+  // }
+  // }
 
-  // console.log({ links });
   return (
     <>
+    <div style={{
+      display: "flex",
+    }}>
       {links.map((l, i) => {
         // console.log({l});
         return (
@@ -47,8 +47,8 @@ export default function Navbar() {
               : styles.notActive
           }
           style={{
-            textDecoration:
-              activeSegment === l.targetSegment ? "underline" : "none",
+            // textDecoration:
+            //   activeSegment === l.targetSegment ? "underline" : "none",
             padding: "0.5rem",
           }}
           key={i}
@@ -57,26 +57,12 @@ export default function Navbar() {
           <p className={montserrat.className}>{l.label}</p>
           {/* {i} */}
           {l.key}
+          
         </Link>
         )
       })}
+      </div>
     </>
   );
 }
 
-// const [filteredLinks, setFilteredLinks] = useState(links);
-
-// useEffect(() => {
-//   if (activeSegment === null) {
-//     setFilteredLinks(links.slice(1));
-//   } else {
-//     setFilteredLinks(links);
-//   }
-// }, [activeSegment]);
-
-// // console.log(links)
-
-// // console.log("activeSegment", activeSegment)
-//   // links.splice(0, 1);
-//   // console.log(links);
-// const [filteredLinks, setFilteredLinks] = useState(links);
