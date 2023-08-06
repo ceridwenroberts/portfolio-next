@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState } from "react";
-// import NavList from "./NavList";
+import NavList from "./NavList";
 // import styles from "./Navbar.module.css";
 
 const Navi = () => {
