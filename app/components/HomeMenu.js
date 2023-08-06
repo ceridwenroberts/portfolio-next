@@ -2,11 +2,15 @@
 
 import React from "react";
 import Link from "next/link";
-import styles from "app/HomeMenu.module.css";
-import localFont from "@next/font/local";
-import { brightYoungThings, montserrat, montserrat_alt, montserrat_sub, syncopate } from "@/styles/fonts";
 
-
+import {
+  brightYoungThings,
+  montserrat,
+  montserrat_alt,
+  montserrat_sub,
+  syncopate,
+} from "@/styles/fonts";
+import styles from "@/styles/HomeMenu.module.css";
 
 export const HomeMenu = () => {
   return (
@@ -18,10 +22,15 @@ export const HomeMenu = () => {
           fontWeight: "400",
           display: "flex",
           flexDirection: "column",
+          
         }}
         className={styles.menu}
       >
-        <Link href="./about" className={` ${brightYoungThings.className} ${styles.linkText} ${styles.about}`} styles={{fontWeight: "100"}}>
+        <Link
+          href="./about"
+          className={` ${brightYoungThings.className} ${styles.linkText} ${styles.about}`}
+          styles={{ fontWeight: "100" }}
+        >
           about
         </Link>
         <Link

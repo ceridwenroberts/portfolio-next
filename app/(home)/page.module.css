@@ -2,12 +2,16 @@
   /* outline: auto; */
 }
 .main {
-  display: flex;
-  flex-direction: column;
+  /* display: flex; */
+  /*flex-direction: column;
   justify-content: space-between;
-  align-items: center;
+  align-items: center; */
   padding: 6rem;
   min-height: 100vh;
+ /* background-color: grey; */
+ display: grid;
+ align-items: space-evenly;
+ align-content: space-evenly
 }
 
 .description {

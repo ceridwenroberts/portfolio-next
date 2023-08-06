@@ -3,7 +3,7 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./*"],
-      "@/fonts": ["./styles/fonts"],
+      "@/fonts": ["./styles/fonts/*"],
       "@/components": ["app/components/*"],
       "@/api": ["app/api/*"],
       "@/styles": ["./styles/*"],
@@ -11,13 +11,3 @@
   }
 }
 
-
-// {
-//   "compilerOptions": {
-//     "baseUrl": "src/",
-//     "paths": {
-//       "@/styles/*": ["styles/*"],
-//       "@/components/*": ["components/*"]
-//     }
-//   }
-// }

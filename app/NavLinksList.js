@@ -4,7 +4,7 @@ import React from "react";
 import Link from "next/link";
 import { useSelectedLayoutSegment } from "next/navigation";
 import styles from "./Navbar.module.css";
-import { Montserrat, Montserrat_Alternates } from "@next/font/google";
+import { Montserrat, Montserrat_Alternates } from "next/font/google";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 

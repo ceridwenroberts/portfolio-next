@@ -4,8 +4,11 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useSelectedLayoutSegment, usePathname } from "next/navigation";
-import styles from "./Navbar.module.css";
-import { Montserrat, Montserrat_Alternates } from "@next/font/google";
+// import styles from "./Navbar.module.css";
+import styles from "@/styles/Navbar.module.css";
+// import styles from "/Users/ceridwenrobertsWork/portfolio_next/styles/Navbar.module.css";
+
+import { Montserrat, Montserrat_Alternates } from "next/font/google";
 // import { works } from "../api/hello/worksData.js";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
@@ -24,45 +27,35 @@ export default function Navbar() {
     links.filter((l) => links.label === "home");
   }
 
-  // const boldHover = (e) => {
-  //   console.log("mouseover");
-  //   e.target.style.fontWeight = "600"
-  //   if (activeSegment)
-  //   {
-  // }
-  // }
-
   return (
     <>
-    <div style={{
-      display: "flex",
-    }}>
-      {links.map((l, i) => {
-        // console.log({l});
-        return (
-        <Link
-          className={
-            activeSegment === l.targetSegment
-              ? styles.isActive
-              : styles.notActive
-          }
-          style={{
-            // textDecoration:
-            //   activeSegment === l.targetSegment ? "underline" : "none",
-            padding: "0.5rem",
-          }}
-          key={i}
-          href={l.path}
-        >
-          <p className={montserrat.className}>{l.label}</p>
-          {/* {i} */}
-          {l.key}
-          
-        </Link>
-        )
-      })}
+      <div
+        style={{
+          display: "flex",
+        }}
+      >
+        {links.map((l, i) => {
+          // console.log({l});
+          return (
+            <Link
+              className={
+                activeSegment === l.targetSegment
+                  ? styles.isActive
+                  : styles.notActive
+              }
+              style={{
+                padding: "0.5rem",
+              }}
+              key={i}
+              href={l.path}
+            >
+              <p className={montserrat.className}>{l.label}</p>
+              {/* {i} */}
+              {l.key}
+            </Link>
+          );
+        })}
       </div>
     </>
   );
 }
-

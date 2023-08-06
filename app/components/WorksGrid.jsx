@@ -35,16 +35,16 @@ export default function WorksGrid() {
         <div style={
             {
                 padding: "32px",
-        }
+            }
         }>
-          
-<div style={{
-    display: "grid",
-    gridGap: "24px",
-    gridTemplateColumns: "repeat(auto-fit, minmax(400px, auto)",
-    // display: "flex",
-    // flexDirection:"column"
-  }}>
+
+            <div style={{
+                display: "grid",
+                gridGap: "24px",
+                gridTemplateColumns: "repeat(auto-fit, minmax(400px, auto)",
+                // display: "flex",
+                // flexDirection:"column"
+            }}>
                 {worksCards}
             </div>
         </div>

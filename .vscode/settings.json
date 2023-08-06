@@ -1,3 +1,5 @@
 {
-    "reactSnippets.settings.typescript": false
+    "reactSnippets.settings.typescript": false,
+    "javascript.updateImportsOnFileMove.enabled": "prompt",
+    "typescript.updateImportsOnFileMove.enabled": "prompt"
 }
