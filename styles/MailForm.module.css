@@ -1,0 +1,102 @@
+.contactBox {
+  padding: 3rem;
+  outline: auto;
+  
+
+}
+
+.contactText {
+  font-family: "Monterrat", sans-serif;
+padding: 0.3em;
+opacity: 90;
+}
+.inputField,
+.textarea {
+  background-color: transparent;
+  border: none;
+  font-family: "Circular", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  overflow: hidden;
+  padding-left: 0;
+  padding-top: 0.5rem;
+  text-align: left;
+  width: 100%;
+  background-color: rgba(188, 143, 143, 0.036);
+  border-radius: 3px;
+
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+}
+
+.inputField:focus-visible {
+  background-color: var(--c-grey-medium);
+  border-bottom: var(--c-green-dark);
+  outline: 1px solid var(--c-grey-medium);
+}
+
+.textarea:focus-visible {
+  background-color: var(--c-grey-medium);
+  border-bottom: var(--c-green-dark);
+  outline: 1px solid var(--c-grey-medium);
+}
+
+label:hover .inputField,
+.inputField:hover {
+  background-color: var(--c-grey-medium);
+}
+
+.textarea:hover {
+  background-color: var(--c-grey-medium);
+}
+
+.inputField [type="checkbox"] {
+  display: inline-flex;
+}
+
+/* *:focus {
+    outline-color: #f6fff8;
+  } */
+
+.textarea {
+  height: 100px;
+  resize: none;
+  border-bottom: 1px solid var(--c-off-black);
+}
+
+.field {
+  padding-top: 1rem;
+}
+
+.fieldset {
+  border: none;
+  padding-bottom: 2rem;
+}
+
+.submitButton {
+  background-color: var(--c-green-dark);
+  border: none;
+  color: #f6fff8;
+  /* font-family: "circular_stdbook"; */
+  font-weight: bold;
+  line-height: 48px;
+  padding: 0 10px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition-duration: 200ms;
+  transition-property: color, background-color;
+  transition-timing-function: ease-in;
+  width: 100%;
+}
+
+.id {
+  font-weight: 400;
+  font-size: 2rem;
+  letter-spacing: 0.2rem;
+  opacity: 40%;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
