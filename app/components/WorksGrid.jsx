@@ -10,7 +10,7 @@ export default function WorksGrid() {
     }
 
     const worksCards = works.map((card, i) => {
-        console.log({ works });
+        // console.log({ works });
         if (typeof card === 'object' && card !== null) {
 
             return (

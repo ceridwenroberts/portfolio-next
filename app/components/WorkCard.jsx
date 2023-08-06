@@ -26,7 +26,7 @@ export default function WorkCard({ url, title, src, alt, height, width }) {
           priority
           fill
           sizes='100vw'
-          onError={console.log("error om image fetch")}
+          // onError={console.log("error om image fetch")}
           style={{
             objectFit: 'cover'
           }}
